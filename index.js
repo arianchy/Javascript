@@ -1,42 +1,25 @@
-let material = {
-  name: "Gold",
-  karat: "22karat",
-  value: 130000,
-  possibility: "2%",
-};
+let math = Number(prompt("Enter your math mark"));
+let english = Number(prompt("Enter your english mark"));
+let bangla = Number(prompt("Enter your bangla mark"));
 
-const student1 = {
-  name: "Arisfa",
-  age: 4,
-  gender: "female",
-  school: "Chittagong school",
-};
+let totalmark = math + english + bangla;
+console.log("totalmark = " + totalmark);
 
-let prime_minister = {
-  Name: "Sheikh hasina",
-  Party: "Awami League",
-  Age: 84,
-  Rating: 7.2,
-};
+let average = totalmark / 3;
+console.log("Average = " + average);
 
-let second_prime_minister = {
-  Name: "Zarek Tia",
-  Party: " Bangladesh National Party(BNP)",
-  Age: 57,
-  Rating: 4.6,
-  knowledge: "Beginner",
-};
-
-second_prime_minister.Name = "Tarek Zia";
-second_prime_minister["Age"] = 60;
-second_prime_minister["Rating0"] = 3.5;
-
-second_prime_minister["knowledge"] = "Intermidiate";
-
-const user = {
-  name: "Arian",
-  email: "arian@gmail.com",
-  password: "11111",
-};
-
-user["password"] = "1234";
+if (average >= 80) {
+  console.log("Your gpa: 5.00");
+} else if (average >= 70) {
+  console.log("Your GPA: 4.00");
+} else if (average >= 60) {
+  console.log("Your GPA: 3.50");
+} else if (average >= 50) {
+  console.log("Your GPA: 3.00");
+} else if (average >= 40) {
+  console.log("Your GPA: 2.50");
+} else if (average >= 33) {
+  console.log("Your GPA: 2.00");
+} else {
+  console.log("You are failed.");
+}

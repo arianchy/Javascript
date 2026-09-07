@@ -1,6 +1,137 @@
+:root {
+  --bg: #0a0a12;
+  --border: #26263a;
+  --text-main: #e6e6ef;
+  --text-muted: #a3a3b8;
+  --accent: #6d6df5;
+  --accent-light: #9797f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  background: #050508;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  border-bottom: 1px solid var(--accent);
+  padding: 18px 40px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-icon s g {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.logo-text span {
+  color: var(--accent-light);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-muted);
   text-decoration: none;
-  background-color: #777;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--text-main);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.cta-button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.cta-button:hover {
+  background: #5a5af0;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .navbar {
+    padding: 16px 20px;
+  }
 }
